@@ -13,6 +13,7 @@
 
 #include <iostream>
 
+
 namespace SlotmachineTest
 {
 	class ClassWithFunction
@@ -31,6 +32,7 @@ namespace SlotmachineTest
 			std::cout << "I was called!\r\n";
 			iWasCalled = true;
 		}
+
 	};
 
 
@@ -47,8 +49,6 @@ namespace SlotmachineTest
 			
 			callBack = callBackGen;
 
-			std::cout << "callBack.obj = " << callBack.obj << "\r\n";
-			std::cout << "callback.func = " << callBack.func << "\r\n";
 
 			callBack.Execute(2);
 
@@ -56,6 +56,19 @@ namespace SlotmachineTest
 
 		}
 		
+		TEST(InvalidTest)
+		{
+
+			SlotMachine::Callback<void, uint32_t> callBack;
+
+			// Callback hasn't been assigned, so invalid
+			callBack.Execute(2);
+
+			// If it made it to this point, invalid callback hasn't crashed the system, so we are good :-)
+			CHECK(true);
+
+		}
+
 
 	} // SUITE(BasicTests)
 } // namespace SlotmachineTest

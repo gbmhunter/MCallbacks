@@ -7,8 +7,8 @@ Slotmachine
 
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.cladlab.com)
 - Created: 2014/01/14
-- Last Modified: 2014/01/16
-- Version: v1.0.0.0
+- Last Modified: 2014/01/22
+- Version: v1.1.0.0
 - Company: CladLabs
 - Project: Free Code Libraries
 - Language: C++
@@ -26,6 +26,44 @@ Description
 ===========
 
 A type-independent method-capable callback and event library for C++.
+
+Usage
+=====
+
+::
+
+	class ClassWithFunction
+	{
+		public:
+	
+			ClassWithFunction();
+	
+			void TryAndCallMe(uint32_t x)
+			{
+				std::cout << "I was called!\r\n";
+			}
+	};
+	
+	function CallTheCallback(SlotMachine::Callback<void, uint32_t> callBack)
+	{
+		// Run the callback function. This will print "I was called!" to stdout
+		callBack.Execute(2);
+	}
+
+
+	int main()
+	{
+		// Create an object with a method to call (this is what the callback will call)
+		ClassWithFunction classWithFunction;
+
+		// Create the callback, calling a method of object classWithFunction
+		SlotMachine::CallbackGen<ClassWithFunction, void, uint32_t> callBack(&classWithFunction, &ClassWithFunction::TryAndCallMe);
+
+		// Pass the callback to another function (just as an example)
+		CallTheCallback(callBack);
+	}
+	
+	
 
 Installation
 ============
@@ -76,5 +114,6 @@ Changelog
 ======== ========== ===================================================================================================
 Version  Date       Comment
 ======== ========== ===================================================================================================
+v1.1.0.0 2014/01/22 Added check for valid callback in 'Execute()' function. Added invalid callback unit test. Added 'Usage' section to README. Removed printing to stdout in assignment operator overload.
 v1.0.0.0 2014/01/16 Initial commit. Library supports method callbacks with one input argument.
 ======== ========== ===================================================================================================

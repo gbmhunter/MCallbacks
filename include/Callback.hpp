@@ -89,11 +89,9 @@ namespace SlotMachine
 
 		Callback& operator=(const Callback<returnType, fArg1Type> &callback)
 		{
-			std::cout << "Equal operator called.\r\n";
 			// Check if the right-hand side Callback object has been initialised
 			if(&callback != NULL)
 			{
-				//std::cout << "callback was not NULL.\r\n";
 				this->obj = callback.obj;
 				this->func = callback.func;
 
@@ -105,10 +103,12 @@ namespace SlotMachine
 
 		returnType Execute(fArg1Type fArg1)
 		{
-			std::cout << "Attempting to execute callback...";
-			// Execute has been called on the caller
-			// Make sure there is a callback function
+			if(this->obj == NULL)
+				return (returnType)NULL;
+
+			// Callback is NOT NULL
 			return (this->obj->*this->func)(fArg1);
+
 		}
 
 	protected:
