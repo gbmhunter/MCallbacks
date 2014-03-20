@@ -79,14 +79,14 @@ namespace SlotMachine
 
 	public:
 
-		//Callback *obj;
-
 		//! @brief	Constructor
 		Callback()
 		{
 			this->obj = 0;
 		}
 
+		//! @brief		Assignment operator overload
+		//! @details	Called when converting from CallbackGen to Callback object types
 		Callback& operator=(const Callback<returnType, fArg1Type> &callback)
 		{
 			// Check if the right-hand side Callback object has been initialised
@@ -99,6 +99,16 @@ namespace SlotMachine
 			else
 				Callback();
 			return *this;
+		}
+
+		//! @brief		Use this to determine if the callback is valid, i.e. it has a callback method assigned.
+		//! @details	Execute() also checks this before calling the callback to prevent memory errors.
+		bool IsValid()
+		{
+			if(this->obj == NULL)
+				return false;
+			else
+				return true;
 		}
 
 		returnType Execute(fArg1Type fArg1)
