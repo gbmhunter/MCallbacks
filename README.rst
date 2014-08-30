@@ -2,20 +2,20 @@
 Slotmachine
 ==============================================================
 
-.. image:: https://api.travis-ci.org/gbmhunter/slotmachine-cpp.png?branch=master   
-	:target: https://travis-ci.org/gbmhunter/slotmachine-cpp
+.. image:: https://api.travis-ci.org/mbedded-ninja/slotmachine-cpp.png?branch=master   
+	:target: https://travis-ci.org/mbedded-ninja/slotmachine-cpp
 
-- Author: gbmhunter <gbmhunter@gmail.com> (http://www.cladlab.com)
-- Created: 2014/01/14
-- Last Modified: 2014/03/20
-- Version: v1.1.1.0
-- Company: CladLabs
+- Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
+- Created: 2014-01-14
+- Last Modified: 2014-08-30
+- Version: v1.1.2.0
+- Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
 - Compiler: GCC	
-- uC Model: n/a
-- Computer Architecture: n/a
-- Operating System: n/a
+- uC Model: Any
+- Computer Architecture: Any
+- Operating System: Any
 - Documentation Format: Doxygen
 - License: GPLv3
 
@@ -114,7 +114,8 @@ Changelog
 ======== ========== ===================================================================================================
 Version  Date       Comment
 ======== ========== ===================================================================================================
-v1.1.1.0 2014/03/20 Added Callback::IsValid() so user can check whether callback is valid before calling Execute(). Added associated unit tests in IsValidTests.cpp.
-v1.1.0.0 2014/01/22 Added check for valid callback in 'Execute()' function. Added invalid callback unit test. Added 'Usage' section to README. Removed printing to stdout in assignment operator overload.
-v1.0.0.0 2014/01/16 Initial commit. Library supports method callbacks with one input argument.
+v1.1.2.0 2014-08-30 Added 'package.json' file for clib support, closes #4. Fixed website references in README, closes #5.
+v1.1.1.0 2014-03-20 Added Callback::IsValid() so user can check whether callback is valid before calling Execute(). Added associated unit tests in IsValidTests.cpp.
+v1.1.0.0 2014-01-22 Added check for valid callback in 'Execute()' function. Added invalid callback unit test. Added 'Usage' section to README. Removed printing to stdout in assignment operator overload.
+v1.0.0.0 2014-01-16 Initial commit. Library supports method callbacks with one input argument.
 ======== ========== ===================================================================================================
