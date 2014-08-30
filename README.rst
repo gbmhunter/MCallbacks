@@ -8,7 +8,7 @@ Slotmachine
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
 - Last Modified: 2014-08-30
-- Version: v1.1.2.0
+- Version: v1.1.2.1
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -114,6 +114,7 @@ Changelog
 ======== ========== ===================================================================================================
 Version  Date       Comment
 ======== ========== ===================================================================================================
+v1.1.2.1 2014-08-30 Fixed the version number in the 'package.json' file.
 v1.1.2.0 2014-08-30 Added 'package.json' file for clib support, closes #4. Fixed website references in README, closes #5.
 v1.1.1.0 2014-03-20 Added Callback::IsValid() so user can check whether callback is valid before calling Execute(). Added associated unit tests in IsValidTests.cpp.
 v1.1.0.0 2014-01-22 Added check for valid callback in 'Execute()' function. Added invalid callback unit test. Added 'Usage' section to README. Removed printing to stdout in assignment operator overload.

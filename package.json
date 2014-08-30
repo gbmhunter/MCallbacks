@@ -1,9 +1,9 @@
 {
-  "name": "SlotMachineCpp",
-  "version": "1.1.1",
+  "name": "slotmachine-cpp",
+  "version": "1.1.2.1",
   "repo": "mbedded-ninja/slotmachine-cpp",
   "description": "Slot machine.",
   "keywords": ["slots", "signals"],
   "license": "MIT",
-  "install": "make"
+  "src": ["include/Callback.hpp"]
 }
