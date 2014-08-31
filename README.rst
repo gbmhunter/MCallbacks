@@ -2,13 +2,13 @@
 SlotMachineCpp
 ==============================================================
 
-.. image:: https://api.travis-ci.org/mbedded-ninja/SlotmachineCpp.png?branch=master   
-	:target: https://travis-ci.org/mbedded-ninja/SlotmachineCpp
+.. image:: https://api.travis-ci.org/mbedded-ninja/SlotMachineCpp.png?branch=master   
+	:target: https://travis-ci.org/mbedded-ninja/SlotMachineCpp
 
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
 - Last Modified: 2014-09-01
-- Version: v1.2.3.0
+- Version: v1.2.4.0
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -114,6 +114,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.2.4.0  2014-09-01 Fixed link to TravisCI image in README, closes #8.
 v1.2.3.0  2014-09-01 Added command in .travis.yml to build UnitTest++ library.
 v1.2.2.0  2014-09-01 Added pushd and popd commands to .travis.yml file to re-enter start directory before running make.
 v1.2.1.0  2014-09-01 Fixed issue with '.travis.yml' file.
