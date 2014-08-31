@@ -1,17 +1,21 @@
 //!
 //! @file 			BasicTests.cpp
-//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.cladlab.com)
-//! @created		2014/01/14
-//! @last-modified 	2014/01/16
+//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
+//! @created		2014-01-14
+//! @last-modified 	2014-09-01
 //! @brief 			Contains basic tests.
 //! @details
 //!					See README.rst in root dir for more info.
 
-#include "./UnitTest++/src/UnitTest++.h"
 
-#include "../api/Slotmachine.hpp"
-
+// System libraries
 #include <iostream>
+
+// User libraries
+#include "unittest-cpp/UnitTest++/UnitTest++.h"
+
+// User source
+#include "../api/Slotmachine.hpp"
 
 
 namespace SlotmachineTest

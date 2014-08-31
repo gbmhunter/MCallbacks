@@ -1,16 +1,18 @@
 //!
 //! @file 			main.cpp
-//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.cladlab.com)
-//! @created		2014/01/14
-//! @last-modified 	2014/01/14
+//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
+//! @created		2014-01-14
+//! @last-modified 	2014-09-01
 //! @brief 			Contains main entry point for unit tests.
 //! @details
 //!					See README.rst in root dir for more info.
 
+// System libraries
 #include <stdio.h>
 
-#include "./UnitTest++/src/UnitTest++.h"
-#include "./UnitTest++/src/TestReporterStdout.h"
+// User libraries
+#include "unittest-cpp/UnitTest++/UnitTest++.h"
+#include "unittest-cpp/UnitTest++/TestReporterStdout.h"
 
 int main()
 {

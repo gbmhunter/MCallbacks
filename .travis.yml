@@ -1,4 +1,8 @@
 language: cpp
 compiler:
   - gcc
-script: "make"
+ install:
+  - cd ..
+  - git clone https://github.com/unittest-cpp/unittest-cpp
+script:
+  - make all
