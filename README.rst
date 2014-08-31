@@ -2,12 +2,12 @@
 Slotmachine
 ==============================================================
 
-.. image:: https://api.travis-ci.org/mbedded-ninja/slotmachine-cpp.png?branch=master   
-	:target: https://travis-ci.org/mbedded-ninja/slotmachine-cpp
+.. image:: https://api.travis-ci.org/mbedded-ninja/SlotmachineCpp.png?branch=master   
+	:target: https://travis-ci.org/mbedded-ninja/SlotmachineCpp
 
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
-- Last Modified: 2014-08-30
+- Last Modified: 2014-09-01
 - Version: v1.1.2.1
 - Company: mbedded.ninja
 - Project: Free Code Libraries
@@ -36,7 +36,7 @@ Usage
 	{
 		public:
 	
-			ClassWithFunction();
+			ClassWithFunction(){};
 	
 			void TryAndCallMe(uint32_t x)
 			{
@@ -114,6 +114,7 @@ Changelog
 ======== ========== ===================================================================================================
 Version  Date       Comment
 ======== ========== ===================================================================================================
+v1.1.2.2 2014-09-01 Deleted the 'package.json' file. Added Cpp to title in README, closes #6.
 v1.1.2.1 2014-08-30 Fixed the version number in the 'package.json' file.
 v1.1.2.0 2014-08-30 Added 'package.json' file for clib support, closes #4. Fixed website references in README, closes #5.
 v1.1.1.0 2014-03-20 Added Callback::IsValid() so user can check whether callback is valid before calling Execute(). Added associated unit tests in IsValidTests.cpp.

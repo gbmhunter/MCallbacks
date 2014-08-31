@@ -1,8 +1,8 @@
 #
-# @file 		Makefile
+# @file 			Makefile
 # @author 		Geoffrey Hunter <gbmhunter@gmail.com> (wwww.cladlab.com)
 # @edited 		n/a
-# @date 		2013/08/29
+# @date 			2013/08/29
 # @brief 		Makefile for Linux-based make, to compile ClideCpp library and run unit test code.
 # @details
 #				See README.rst
@@ -42,16 +42,16 @@ EXAMPLE_CC_FLAGS := -Wall -g
 .PHONY: depend clean
 
 # All
-all: clideLib test example
+all: slotMachineLib test example
 	
 	# Run unit tests:
-	@./test/ClideTest.elf
+	@./test/SlotMachine.elf
 
 #======== CLIDE LIB ==========	
 
-clideLib : $(SRC_OBJ_FILES)
-	# Make Clide library
-	ar r libClide.a $(SRC_OBJ_FILES)
+slotMachineLib : $(SRC_OBJ_FILES)
+	# Make slot-machine library
+	ar r libSlotMachine.a $(SRC_OBJ_FILES)
 	
 # Generic rule for src object files
 src/%.o: src/%.cpp
@@ -69,9 +69,9 @@ src/%.o: src/%.cpp
 # ======== TEST ========
 	
 # Compiles unit test code
-test : $(TEST_OBJ_FILES) | clideLib unitTestLib
+test : $(TEST_OBJ_FILES) | slotMachineLib unitTestLib
 	# Compiling unit test code
-	g++ $(TEST_LD_FLAGS) -o ./test/ClideTest.elf $(TEST_OBJ_FILES) -L./test/UnitTest++ -lUnitTest++ -L./ -lClide
+	g++ $(TEST_LD_FLAGS) -o ./test/SlotMachineTest.elf $(TEST_OBJ_FILES) -L./test/UnitTest++ -lUnitTest++ -L./ -lSlotMachine
 	
 # Generic rule for test object files
 #test/%.o: test/%.cpp
@@ -96,9 +96,9 @@ unitTestLib:
 # ===== EXAMPLE ======
 
 # Compiles example code
-example : $(EXAMPLE_OBJ_FILES) clideLib
+example : $(EXAMPLE_OBJ_FILES) slotMachineLib
 	# Compiling example code
-	g++ $(EXAMPLE_LD_FLAGS) -o ./example/example.elf $(EXAMPLE_OBJ_FILES) -L./ -lClide
+	g++ $(EXAMPLE_LD_FLAGS) -o ./example/example.elf $(EXAMPLE_OBJ_FILES) -L./ -lSlotMachine
 	
 # Generic rule for test object files
 example/%.o: example/%.cpp
@@ -106,7 +106,7 @@ example/%.o: example/%.cpp
 	
 # ====== CLEANING ======
 	
-clean: clean-ut clean-clide
+clean: clean-ut clean-slot-machine
 	# Clean UnitTest++ library (has it's own Makefile)
 	$(MAKE) -C ./test/UnitTest++/ clean
 	
@@ -114,10 +114,10 @@ clean-ut:
 	@echo " Cleaning test object files..."; $(RM) ./test/*.o
 	@echo " Cleaning test executable..."; $(RM) ./test/*.elf
 	
-clean-clide:
+clean-slot-machine:
 	@echo " Cleaning src object files..."; $(RM) ./src/*.o
 	@echo " Cleaning src dependency files..."; $(RM) ./src/*.d
-	@echo " Cleaning Clide static library..."; $(RM) ./*.a
+	@echo " Cleaning Slot Machine static library..."; $(RM) ./*.a
 	@echo " Cleaning test object files..."; $(RM) ./test/*.o
 	@echo " Cleaning test dependency files..."; $(RM) ./test/*.d
 	@echo " Cleaning test executable..."; $(RM) ./test/*.elf
