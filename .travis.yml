@@ -2,7 +2,9 @@ language: cpp
 compiler:
   - gcc
 install:
+  - pushd .
   - cd ..
   - git clone https://github.com/unittest-cpp/unittest-cpp
+  - popd
 script:
   - make all
