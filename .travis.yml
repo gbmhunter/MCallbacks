@@ -5,6 +5,7 @@ install:
   - pushd .
   - cd ..
   - git clone https://github.com/unittest-cpp/unittest-cpp
+  - "cd unittest-cpp; cmake .; make all"
   - popd
 script:
   - make all

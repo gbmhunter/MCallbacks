@@ -8,7 +8,7 @@ SlotMachineCpp
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
 - Last Modified: 2014-09-01
-- Version: v1.2.2.0
+- Version: v1.2.3.0
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -114,6 +114,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.2.3.0  2014-09-01 Added command in .travis.yml to build UnitTest++ library.
 v1.2.2.0  2014-09-01 Added pushd and popd commands to .travis.yml file to re-enter start directory before running make.
 v1.2.1.0  2014-09-01 Fixed issue with '.travis.yml' file.
 v1.2.0.0  2014-09-01 Removed UnitTest++ library from 'test/', it is now an external dependency, closes #7. Downloads UnitTest++ library as part of install step in the travis/yml config file.
