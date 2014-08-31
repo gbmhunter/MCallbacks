@@ -8,7 +8,7 @@ SlotMachineCpp
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
 - Last Modified: 2014-09-01
-- Version: v1.2.0.0
+- Version: v1.2.1.0
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -114,6 +114,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.2.1.0  2014-09-01 Fixed issue with '.travis.yml' file.
 v1.2.0.0  2014-09-01 Removed UnitTest++ library from 'test/', it is now an external dependency, closes #7. Downloads UnitTest++ library as part of install step in the travis/yml config file.
 v1.1.2.2  2014-09-01 Deleted the 'package.json' file. Added Cpp to title in README, closes #6.
 v1.1.2.1  2014-08-30 Fixed the version number in the 'package.json' file.

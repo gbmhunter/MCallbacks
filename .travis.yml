@@ -1,7 +1,7 @@
 language: cpp
 compiler:
   - gcc
- install:
+install:
   - cd ..
   - git clone https://github.com/unittest-cpp/unittest-cpp
 script:
