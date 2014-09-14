@@ -74,7 +74,7 @@ deps :
 # Compiles unit test code
 test : deps $(TEST_OBJ_FILES) | src
 	# Compiling unit test code
-	g++ $(TEST_LD_FLAGS) -o ./test/Tests.elf $(TEST_OBJ_FILES) $(DEP_LIB_PATHS) $(DEP_LIBS) -L./ -lCallbacks
+	g++ $(TEST_LD_FLAGS) -o ./test/Tests.elf $(TEST_OBJ_FILES) $(DEP_LIB_PATHS) $(DEP_LIBS) -L./ -lMCallbacks
 
 # Generic rule for test object files
 test/%.o: test/%.cpp
