@@ -8,7 +8,7 @@ MCallbacks
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
 - Last Modified: 2014-09-14
-- Version: v1.3.0.0
+- Version: v1.3.1.0
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -114,6 +114,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.3.1.0  2014-09-14 Added build matrix to '.travis.yml' file, hopefully this fixes the build error.
 v1.3.0.0  2014-09-14 Renamed module from 'SlotMachineCpp' to 'MCallbacks'. Updated URLs from 'www.cladlab.com' to 'www.mbedded.ninja'. Replaced UnitTestCpp with the MUnitTest module, closes #10.
 v1.2.4.0  2014-09-01 Fixed link to TravisCI image in README, closes #8.
 v1.2.3.0  2014-09-01 Added command in .travis.yml to build UnitTest++ library.
