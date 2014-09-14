@@ -1,8 +1,8 @@
 //!
-//! @file 			Slotmachine.hpp
-//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.cladlab.com)
-//! @created		2014/01/14
-//! @last-modified 	2014/01/14
+//! @file 			MCallbacksApi.hpp
+//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
+//! @created		2014-01-14
+//! @last-modified 	2014-09-14
 //! @brief
 //! @details
 //!					See README.rst in root dir for more info.

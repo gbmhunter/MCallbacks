@@ -1,14 +1,14 @@
-==============================================================
-SlotMachineCpp
-==============================================================
+==========
+MCallbacks
+==========
 
-.. image:: https://api.travis-ci.org/mbedded-ninja/SlotMachineCpp.png?branch=master   
-	:target: https://travis-ci.org/mbedded-ninja/SlotMachineCpp
+.. image:: https://api.travis-ci.org/mbedded-ninja/MCallbacks.png?branch=master   
+	:target: https://travis-ci.org/mbedded-ninja/MCallbacks
 
 - Author: gbmhunter <gbmhunter@gmail.com> (http://www.mbedded.ninja)
 - Created: 2014-01-14
-- Last Modified: 2014-09-01
-- Version: v1.2.4.0
+- Last Modified: 2014-09-14
+- Version: v1.3.0.0
 - Company: mbedded.ninja
 - Project: Free Code Libraries
 - Language: C++
@@ -25,7 +25,7 @@ SlotMachineCpp
 Description
 ===========
 
-A type-independent method-capable callback and event library for C++.
+A type-independent method-capable callback library for C++.
 
 Usage
 =====
@@ -72,13 +72,13 @@ Installation
 
 2. Run `make all` to compile and run unit tests.
 
-3. To include slotmachine-cpp into your embedded (or otherwise) firmware/software project, copy the repo into your project folder (or other suitable place) and include the file "api/Slotmachine.hpp" from your C++ code. No source files need to be compiled.
+3. To include MCallbacks into your embedded (or otherwise) firmware/software project, copy the repo into your project folder (or other suitable place) and include the file "api/MCallbacksApi.hpp" from your C++ code. No source files need to be compiled.
 
 
 External Dependencies
 =====================
 
-The following table lists all of slotmachine-cpp's external dependencies.
+The following table lists all of MCallbacks external dependencies.
 
 ====================== ==================== ======================================================================
 Dependency             Delivery             Usage
@@ -114,6 +114,7 @@ Changelog
 ========= ========== ===================================================================================================
 Version   Date       Comment
 ========= ========== ===================================================================================================
+v1.3.0.0  2014-09-14 Renamed module from 'SlotMachineCpp' to 'MCallbacks'. Updated URLs from 'www.cladlab.com' to 'www.mbedded.ninja'. Replaced UnitTestCpp with the MUnitTest module, closes #10.
 v1.2.4.0  2014-09-01 Fixed link to TravisCI image in README, closes #8.
 v1.2.3.0  2014-09-01 Added command in .travis.yml to build UnitTest++ library.
 v1.2.2.0  2014-09-01 Added pushd and popd commands to .travis.yml file to re-enter start directory before running make.

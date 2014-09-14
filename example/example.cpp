@@ -1,9 +1,9 @@
 //!
 //! @file 			example.cpp
-//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.cladlab.com)
-//! @created 		2014/01/14
-//! @last-modified 	2014/01/14
-//! @brief 			Example slotmachine program, designed to be run on Linux.
+//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
+//! @created 		2014-01-14
+//! @last-modified 	2014-09-14
+//! @brief 			Example MCallbacks program, designed to be run on Linux.
 //! @details
 //!					See README.rst in root dir for more info.
 

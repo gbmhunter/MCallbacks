@@ -1,8 +1,8 @@
 //!
 //! @file 			Callback.hpp
-//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.cladlab.com)
-//! @created		2014/01/14
-//! @last-modified 	2014/01/16
+//! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
+//! @created		2014-01-14
+//! @last-modified 	2014-09-14
 //! @brief			Contains the CallbackBase, Callback and CallbackGen classes.
 //! @details
 //!					See README.rst in root dir for more info.
@@ -15,8 +15,8 @@
 //======================================== HEADER GUARD =========================================//
 //===============================================================================================//
 
-#ifndef SLOTMACHINE_CALLBACK_H
-#define SLOTMACHINE_CALLBACK_H
+#ifndef MCALLBACK_CALLBACK_H
+#define MCALLBACK_CALLBACK_H
 
 //===============================================================================================//
 //========================================== INCLUDES ===========================================//
@@ -33,7 +33,7 @@
 //======================================== NAMESPACE ============================================//
 //===============================================================================================//
 
-namespace SlotMachine
+namespace MCallbacks
 {
 
 	//! @brief		This is a base class for the Caller class.
@@ -148,8 +148,8 @@ namespace SlotMachine
 		CallbackGen();
 	};
 
-} // namespace Slotmachine
+} // namespace MCallbacks
 
-#endif	// #ifndef SLOTMACHINE_CALLBACK_H
+#endif	// #ifndef MCALLBACK_CALLBACK_H
 
 // EOF

@@ -2,23 +2,23 @@
 //! @file 			BasicTests.cpp
 //! @author 		Geoffrey Hunter <gbmhunter@gmail.com> (www.mbedded.ninja)
 //! @created		2014-01-14
-//! @last-modified 	2014-09-01
+//! @last-modified 	2014-09-14
 //! @brief 			Contains basic tests.
 //! @details
 //!					See README.rst in root dir for more info.
 
-
-// System libraries
+//===== SYSTEM LIBRARIES =====//
 #include <iostream>
+#include <cstdint>
 
-// User libraries
-#include "unittest-cpp/UnitTest++/UnitTest++.h"
+//====== USER LIBRARIES =====//
+#include "MUnitTest/api/MUnitTestApi.hpp"
 
-// User source
-#include "../api/Slotmachine.hpp"
+//===== USER SOURCE =====//
+#include "../api/MCallbacksApi.hpp"
 
 
-namespace SlotmachineTest
+namespace MCallbacksTests
 {
 	class ClassWithFunction
 	{
@@ -39,40 +39,35 @@ namespace SlotmachineTest
 
 	};
 
-
-	SUITE(BasicTests)
+		
+	MTEST(BasicCallbackTest)
 	{
-		
-		TEST(BasicTest)
-		{			
-			ClassWithFunction classWithFunction;
+		ClassWithFunction classWithFunction;
 
-			SlotMachine::CallbackGen<ClassWithFunction, void, uint32_t> callBackGen(&classWithFunction, &ClassWithFunction::TryAndCallMe);
+		MCallbacks::CallbackGen<ClassWithFunction, void, uint32_t> callBackGen(&classWithFunction, &ClassWithFunction::TryAndCallMe);
 
-			SlotMachine::Callback<void, uint32_t> callBack;
-			
-			callBack = callBackGen;
+		MCallbacks::Callback<void, uint32_t> callBack;
+
+		callBack = callBackGen;
 
 
-			callBack.Execute(2);
+		callBack.Execute(2);
 
-			CHECK_EQUAL(true, classWithFunction.iWasCalled);
+		CHECK_EQUAL(true, classWithFunction.iWasCalled);
 
-		}
-		
-		TEST(InvalidTest)
-		{
+	}
 
-			SlotMachine::Callback<void, uint32_t> callBack;
+	MTEST(InvalidTest)
+	{
 
-			// Callback hasn't been assigned, so invalid
-			callBack.Execute(2);
+		MCallbacks::Callback<void, uint32_t> callBack;
 
-			// If it made it to this point, invalid callback hasn't crashed the system, so we are good :-)
-			CHECK(true);
+		// Callback hasn't been assigned, so invalid
+		callBack.Execute(2);
 
-		}
+		// If it made it to this point, invalid callback hasn't crashed the system, so we are good :-)
+		CHECK(true);
 
+	}
 
-	} // SUITE(BasicTests)
-} // namespace SlotmachineTest
+} // namespace MCallbacksTests
